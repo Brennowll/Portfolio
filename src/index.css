@@ -1,8 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer base {
+  @font-face {
+    font-family: Archive;
+    src: url(./fonts/Archive.otf);
+  }
+  @font-face {
+    font-family: Montserrat-Regular;
+    src: url(./fonts/Montserrat-Regular.ttf);
+  }
+  @font-face {
+    font-family: Poppins-Regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

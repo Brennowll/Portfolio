@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./index.html",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -51,6 +52,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        localBlue: "#020727",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,7 +73,12 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        archive: ["Archive"],
+        montserratRegular: ["Montserrat-Regular"],
+        poppinsRegular: ["Poppins-Regular"],
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: ["tailwindcss-animate"],
 }
