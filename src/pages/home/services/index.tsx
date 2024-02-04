@@ -3,9 +3,10 @@ import servicesMockup from "/src/assets/servicesMockup.png"
 export default function ServicesPage() {
   return (
     <section
+      id="servicesPage"
       className="relative flex flex-col items-center justify-between gap-6 px-4
-      pb-36 pt-14 sm:gap-10 sm:px-8 lg:flex-row lg:items-start lg:gap-14 lg:px-12
-      xl:px-16 2xl:px-24 2xl:pb-52 2xl:pt-20"
+      pb-6 sm:gap-10 sm:px-8 sm:pb-12 sm:pt-14 lg:flex-row lg:items-start lg:gap-14
+      lg:px-12 lg:pb-36 xl:px-16 2xl:px-24 2xl:pb-52 2xl:pt-20"
     >
       <h2
         className="font-montserratRegular text-3xl font-bold leading-tight

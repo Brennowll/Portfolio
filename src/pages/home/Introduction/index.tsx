@@ -17,7 +17,7 @@ const useNav = () => {
     return handleClick
   }
 
-  const navToServicePage = useNavConstructor("#servicePage")
+  const navToServicePage = useNavConstructor("#servicesPage")
   const navToAboutPage = useNavConstructor("#aboutPage")
   const navToProjectPage = useNavConstructor("#projectPage")
   const navToContactPage = useNavConstructor("#contactPage")
@@ -40,7 +40,7 @@ export default function Introduction() {
 
   return (
     <section
-      className="flex flex-col gap-4 px-4 pb-20 sm:mb-10 sm:px-8 lg:mb-28
+      className="flex flex-col gap-4 px-4 pb-5 sm:px-8 sm:pb-10 lg:mb-28
       lg:gap-14 lg:px-12 lg:py-10 xl:px-16 2xl:px-24 2xl:py-14"
     >
       <header
@@ -90,13 +90,13 @@ export default function Introduction() {
       >
         <div className="flex flex-col gap-2 sm:gap-5">
           <h2
-            className="z-10 font-archive text-5xl leading-tight sm:text-7xl
-            2xl:text-8xl"
+            className="z-10 text-center font-archive text-5xl leading-tight
+            sm:text-7xl lg:text-left 2xl:text-8xl"
           >
             WEBSITES MODERNOS
             <br />E ESCALÁVEIS
           </h2>
-          <p className="z-10 text-lg leading-6 sm:text-2xl sm:leading-7 lg:text-left 2xl:text-4xl">
+          <p className="z-10 text-center text-lg leading-6 sm:text-2xl sm:leading-7 lg:text-left 2xl:text-4xl">
             Melhore o alcance e evolua seu negócio
             <br />
             utilizando as melhores ferramentas
@@ -105,9 +105,9 @@ export default function Introduction() {
           </p>
         </div>
         <Button
-          className="w-fit rounded-none bg-localBlue px-10 py-4 font-montserratRegular
-          lg:px-16 lg:py-7 lg:text-xl"
-          onClick={navToContactPage}
+          className="w-fit self-center rounded-none bg-localBlue px-10 py-4
+          font-montserratRegular lg:self-start lg:px-16 lg:py-7 lg:text-xl"
+          onClick={navToServicePage}
         >
           QUERO MEU SITE!
         </Button>
