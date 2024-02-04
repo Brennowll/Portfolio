@@ -1,6 +1,6 @@
 import servicesMockup from "/src/assets/servicesMockup.png"
 
-export default function ServicesPage() {
+export default function Services() {
   return (
     <section
       id="servicesPage"
