@@ -40,8 +40,8 @@ export default function Introduction() {
 
   return (
     <section
-      className="flex h-fit flex-col gap-8 px-4 pb-20 sm:px-8 lg:mb-0 lg:h-screen
-      lg:gap-10 lg:px-12 xl:px-16 2xl:px-24"
+      className="flex flex-col gap-4 px-4 pb-20 sm:mb-10 sm:px-8 lg:mb-28
+      lg:gap-14 lg:px-12 lg:py-10 xl:px-16 2xl:px-24 2xl:py-14"
     >
       <header
         className="flex h-24 flex-row items-center justify-between p-0 sm:h-1/6
@@ -85,18 +85,18 @@ export default function Introduction() {
         </nav>
       </header>
       <main
-        className="relative flex h-4/5 flex-col items-center gap-24 sm:align-baseline
-        lg:items-start"
+        className="relative flex h-4/5 flex-col gap-10 sm:gap-14 sm:align-baseline lg:items-start
+        lg:gap-24"
       >
-        <div className="flex flex-col gap-5">
-          <h1
-            className="z-10 text-center font-archive text-5xl leading-tight sm:text-7xl
-            lg:text-left 2xl:text-8xl"
+        <div className="flex flex-col gap-2 sm:gap-5">
+          <h2
+            className="z-10 font-archive text-5xl leading-tight sm:text-7xl
+            2xl:text-8xl"
           >
             WEBSITES MODERNOS
             <br />E ESCALÁVEIS
-          </h1>
-          <p className="z-10 text-center text-lg sm:text-2xl lg:text-left 2xl:text-4xl">
+          </h2>
+          <p className="z-10 text-lg leading-6 sm:text-2xl sm:leading-7 lg:text-left 2xl:text-4xl">
             Melhore o alcance e evolua seu negócio
             <br />
             utilizando as melhores ferramentas
@@ -105,17 +105,17 @@ export default function Introduction() {
           </p>
         </div>
         <Button
-          className="w-fit rounded-none bg-localBlue px-16 py-7 font-montserratRegular
-          text-xl"
+          className="w-fit rounded-none bg-localBlue px-10 py-4 font-montserratRegular
+          lg:px-16 lg:py-7 lg:text-xl"
           onClick={navToContactPage}
         >
-          QUERO MEU SITE
+          QUERO MEU SITE!
         </Button>
         <img
           src={introductionMockup}
           alt="Um celular na página inicial de um aplicativo."
           className="absolute right-0 top-4 z-0 hidden max-w-sm self-center lg:block
-          2xl:right-32 2xl:max-w-md"
+          2xl:right-16 2xl:max-w-md"
         />
       </main>
     </section>

@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+#root {
+  overflow: hidden;
+}
+
+.spiky-background {
+  clip-path: polygon(0 0, 100% 5px, 0 100%);
+}
+
 @layer base {
   @font-face {
     font-family: Archive;
