@@ -6,7 +6,7 @@ export default function TransictionServicesMockup() {
       <img
         src={servicesMockup}
         alt="Um notebook na página principal do website 'Productivity App'."
-        className="right-0 max-w-80 py-14 sm:max-w-sm"
+        className="right-0 z-10 max-w-80 py-14 sm:max-w-sm"
       />
     </div>
   )
