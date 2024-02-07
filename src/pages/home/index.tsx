@@ -5,6 +5,7 @@ import TransictionIntroductionMockup from "./TransictionIntroductionMockup"
 import TransictionServicesMockup from "./TransictionServicesMockup"
 import SpikyLine from "./SpikyLine"
 import About from "./About"
+import Projects from "./Projects"
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Services />
       <TransictionServicesMockup />
       <About />
+      <Projects />
     </ScrollArea>
   )
 }
