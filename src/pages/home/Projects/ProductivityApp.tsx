@@ -1,6 +1,17 @@
+import { X, PlayCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { useShowDialog } from "./hooks"
+import {
+  Dialog,
+  DialogContent,
+  DialogClose,
+} from "@/components/ui/dialog"
 import productivityAppMockup from "/src/assets/productivityAppMockup.png"
+import videoProductivityApp from "/src/assets/videoProductivityApp.mp4"
 
 export default function ProductivityApp() {
+  const { dialogOpen, toggleDialog } = useShowDialog()
+
   return (
     <section
       className="z-50 flex flex-col-reverse items-center bg-localBlue
@@ -38,10 +49,44 @@ export default function ProductivityApp() {
           na gestão de informações, oferece aos usuários uma solução
           poderosa para manter-se organizado e atingir metas.
         </p>
-        <div
-          className="h-52 w-full max-w-sm rounded-3xl bg-slate-800 xl:mr-28
-          xl:h-60 xl:max-w-md 2xl:mr-52"
-        ></div>
+        <button
+          className="relative flex w-full max-w-sm items-center justify-center overflow-hidden
+          rounded-3xl sm:h-52 xl:mr-28 xl:h-60 xl:max-w-md
+          2xl:mr-52"
+          onClick={toggleDialog}
+        >
+          <span
+            className="absolute left-0 h-full w-full rounded-3xl bg-black
+            opacity-40"
+          ></span>
+          <PlayCircle className="absolute h-10 w-10" color="white" />
+          <video
+            src={videoProductivityApp}
+            className="self-start rounded-3xl"
+          ></video>
+        </button>
+        <Dialog open={dialogOpen}>
+          <DialogContent className="max-w-5xl border-0 bg-localBlue">
+            <video
+              controls
+              autoPlay
+              muted
+              loop
+              className="rounded-lg"
+            >
+              <source src={videoProductivityApp} type="video/mp4" />
+            </video>
+            <DialogClose asChild>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={toggleDialog}
+              >
+                <X />
+              </Button>
+            </DialogClose>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   )

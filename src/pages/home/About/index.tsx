@@ -1,4 +1,5 @@
 import aboutBackground from "/src/assets/aboutBackground.png"
+import personalPhoto from "/src/assets/personalPhoto.png"
 
 export default function About() {
   return (
@@ -12,12 +13,12 @@ export default function About() {
       <section
         className="z-10 flex w-full flex-col items-center justify-between
         bg-localBlue pb-5 sm:pb-10 sm:pt-10 lg:flex-row lg:items-start
-        lg:bg-transparent lg:pb-40 lg:pl-12 lg:pt-20 xl:pb-10 xl:pl-16 xl:pt-32
-        2xl:py-44 2xl:pl-24"
+        lg:bg-transparent lg:pb-40 lg:pl-12 lg:pt-20 xl:pb-10 xl:pl-16
+        xl:pt-32 2xl:py-44 2xl:pl-24"
       >
         <div
-          className="flex max-w-lg flex-col gap-7 px-4 sm:max-w-2xl sm:px-8 lg:px-0 
-          2xl:max-w-3xl 2xl:gap-14"
+          className="flex max-w-lg flex-col gap-7 px-4 pt-16 sm:max-w-2xl sm:px-8 
+          lg:px-0 2xl:max-w-3xl 2xl:gap-14 2xl:pt-0"
         >
           <h2
             className="text-center font-montserratRegular text-4xl font-bold
@@ -45,13 +46,18 @@ export default function About() {
         </div>
         <div
           className="flex w-full items-center justify-center bg-localBlue pb-14
-          pt-32 lg:ml-20 lg:bg-transparent lg:p-0 xl:ml-40"
+          pt-40 lg:ml-20 lg:bg-transparent lg:pb-0 xl:ml-40 xl:pt-20"
         >
           <div
-            className="h-[21rem] w-60 rounded-3xl bg-zinc-950 xl:h-[28rem]
-            xl:w-80"
+            className="relative flex h-[21rem] w-60 items-center
+            rounded-3xl bg-zinc-950 xl:h-[25rem] xl:w-72 2xl:h-[28rem] 2xl:w-80"
           >
-            <img src="" alt="" />
+            <img
+              src={personalPhoto}
+              alt="Foto de Brenno Bomtempo, autor deste site."
+              className="absolute bottom-0 h-[28rem] w-full object-cover
+              xl:h-[33rem] 2xl:h-[40rem]"
+            />
           </div>
         </div>
       </section>

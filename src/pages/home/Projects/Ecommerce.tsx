@@ -1,11 +1,22 @@
+import { X, PlayCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { useShowDialog } from "./hooks"
+import {
+  Dialog,
+  DialogContent,
+  DialogClose,
+} from "@/components/ui/dialog"
 import ecommerceMockup from "/src/assets/ecommerceMockup.png"
+import videoEcommerce from "/src/assets/videoEcommerce.mp4"
 
 export default function Ecommerce() {
+  const { dialogOpen, toggleDialog } = useShowDialog()
+
   return (
     <section
       id="projectPage"
       className="z-50 flex flex-col-reverse items-center bg-localBeige
-      pb-5 lg:flex-row lg:items-start xl:mt-44 2xl:mt-32"
+    pb-5 lg:flex-row lg:items-start xl:mt-44 2xl:mt-32"
     >
       <img
         src={ecommerceMockup}
@@ -30,7 +41,7 @@ export default function Ecommerce() {
         </div>
         <p
           className="max-w-sm pl-2 text-center font-poppinsRegular text-sm
-          sm:text-base lg:text-left xl:max-w-md xl:p-0 xl:text-lg 2xl:text-xl"
+            sm:text-base lg:text-left xl:max-w-md xl:p-0 xl:text-lg 2xl:text-xl"
         >
           Desenvolvi e lidero um projeto de e-commerce de roupas
           femininas, onde a elegância e a funcionalidade se encontram.
@@ -39,10 +50,44 @@ export default function Ecommerce() {
           trabalho garante uma plataforma confiável para nossos
           clientes.
         </p>
-        <div
-          className="h-52 w-full max-w-sm rounded-3xl bg-slate-800 px-10 lg:h-44
-          xl:h-60 xl:w-full xl:max-w-md xl:p-0"
-        ></div>
+        <button
+          className="relative flex w-full max-w-sm items-center justify-center
+          overflow-hidden rounded-3xl sm:h-52 lg:h-44 xl:h-60 xl:w-full
+          xl:max-w-md xl:p-0"
+          onClick={toggleDialog}
+        >
+          <span
+            className="absolute left-0 h-full w-full rounded-3xl bg-black
+            opacity-40"
+          ></span>
+          <PlayCircle className="absolute h-10 w-10" color="white" />
+          <video
+            src={videoEcommerce}
+            className="self-start rounded-3xl"
+          ></video>
+        </button>
+        <Dialog open={dialogOpen}>
+          <DialogContent className="max-w-5xl border-0 bg-localBlue">
+            <video
+              controls
+              autoPlay
+              muted
+              loop
+              className="rounded-lg"
+            >
+              <source src={videoEcommerce} type="video/mp4" />
+            </video>
+            <DialogClose asChild>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={toggleDialog}
+              >
+                <X />
+              </Button>
+            </DialogClose>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   )
