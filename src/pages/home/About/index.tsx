@@ -2,7 +2,7 @@ import aboutBackground from "/src/assets/aboutBackground.png"
 
 export default function About() {
   return (
-    <div className="relative mt-10 flex w-full lg:m-0">
+    <div id="aboutPage" className="relative mt-10 flex w-full lg:m-0">
       <img
         src={aboutBackground}
         alt=""

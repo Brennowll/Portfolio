@@ -3,6 +3,7 @@ import ecommerceMockup from "/src/assets/ecommerceMockup.png"
 export default function Ecommerce() {
   return (
     <section
+      id="projectPage"
       className="z-50 flex flex-col-reverse items-center bg-localBeige
       pb-5 lg:flex-row lg:items-start xl:mt-44 2xl:mt-32"
     >
