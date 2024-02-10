@@ -1,4 +1,4 @@
-import { X, PlayCircle } from "lucide-react"
+import { X, PlayCircle, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useShowDialog } from "./hooks"
 import {
@@ -26,17 +26,28 @@ export default function ProductivityApp() {
         className="flex w-full flex-col items-center justify-center
         gap-5 bg-localBlue px-7 py-10 lg:pb-0 lg:pt-10 xl:gap-10 xl:pt-12 2xl:pt-32"
       >
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <h2
             className="mb-3 text-center font-poppinsRegular text-3xl
-            font-bold leading-3 text-white sm:text-5xl lg:w-[23rem] lg:text-left
+            font-bold text-white sm:text-5xl sm:leading-10 lg:w-[23rem] lg:text-left
             xl:w-[35rem] xl:max-w-none 2xl:w-fit 2xl:text-6xl 2xl:leading-[3rem]"
           >
             App de produtividade
           </h2>
-          <p className="text-center text-lg text-white lg:text-left">
-            Website personalizado
-          </p>
+          <div className="flex gap-2">
+            <p className="text-center text-lg text-white lg:text-left">
+              Website personalizado
+            </p>{" "}
+            <a
+              href="https://productivityapp.brennowll.tech/"
+              target="_blank"
+            >
+              <ExternalLink
+                color="white"
+                className="transition-all hover:h-7 hover:w-7"
+              />
+            </a>
+          </div>
         </div>
         <p
           className="max-w-sm pl-2 text-center font-poppinsRegular text-sm text-white
